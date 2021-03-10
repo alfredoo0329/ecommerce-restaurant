@@ -5,7 +5,7 @@ const router = Router();
 const ingredients = require('../data/ingredients.json');
 const api_url = '/api/ingredients';
 
-//methods
+//methods of ingredients
 function isNameRepeated(new_name) {
     for (const ingredient of ingredients) {
         let name_repeated = ingredient.name == new_name;
