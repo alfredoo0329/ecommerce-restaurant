@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "Tomate",
+        "price_kg": 18,
+        "price_item": -1 
+    },
+    {
+        "id": 2,
+        "name": "Lechuga",
+        "price_kg": -1,
+        "price_item": 12 
+    },
+    {
+        "id": 3,
+        "name": "Cebolla",
+        "price_kg": 20,
+        "price_item": -1 
+    },
+    {
+        "id": 4,
+        "name": "Cilantro",
+        "price_kg": -1,
+        "price_item": 5 
+    },
+    {
+        "id": 5,
+        "name": "Papa",
+        "price_kg": 15,
+        "price_item": -1 
+    }
+]
