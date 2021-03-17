@@ -1,0 +1,102 @@
+[
+    {
+        "id": 1,
+        "image": "recipi_image.jpg",
+        "title": "Enchiladas",
+        "price": 200,
+        "tipe": "Comida",
+        "ingredients": [
+            {
+                "ingredient_id": 1,
+                "number": 5
+            },
+            {
+                "ingredient_id": 3,
+                "number": 2
+            },
+            {
+                "ingredient_id": 5,
+                "number": 1
+            },
+            {
+                "ingredient_id": 4,
+                "number": 2
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "image": "recipi_image.jpg",
+        "title": "Sandwichon",
+        "price": 150,
+        "tipe": "Comida",
+        "ingredients": [
+            {
+                "ingredient_id": 1,
+                "number": 5
+            },
+            {
+                "ingredient_id": 3,
+                "number": 2
+            },
+            {
+                "ingredient_id": 5,
+                "number": 1
+            },
+            {
+                "ingredient_id": 4,
+                "number": 2
+            },
+            {
+                "ingredient_id": 5,
+                "number": 1
+            },
+            {
+                "ingredient_id": 4,
+                "number": 2
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "image": "recipi_image.jpg",
+        "title": "Dedos de Queso",
+        "price": 90,
+        "tipe": "Entrada",
+        "ingredients": [
+            {
+                "ingredient_id": 1,
+                "number": 5
+            },
+            {
+                "ingredient_id": 3,
+                "number": 2
+            },
+            {
+                "ingredient_id": 4,
+                "number": 2
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "image": "recipi_image.jpg",
+        "title": "Pay de Queso",
+        "price": 120,
+        "tipe": "Postre",
+        "ingredients": [
+            {
+                "ingredient_id": 3,
+                "number": 2
+            },
+            {
+                "ingredient_id": 5,
+                "number": 1
+            },
+            {
+                "ingredient_id": 4,
+                "number": 2
+            }
+        ]
+    }
+]
