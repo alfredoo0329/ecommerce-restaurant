@@ -1,0 +1,23 @@
+[
+    {
+        "total":850,
+        "wIVA":986,
+        "platillos":[
+            {
+                "recipe_id":1,
+                "cantidad":2,
+                "price":400
+            },
+            {
+                "recipe_id":3,
+                "cantidad":1,
+                "price":90
+            },
+            {
+                "recipe_id":4,
+                "cantidad":3,
+                "price":360
+            }
+        ]
+    }
+]
