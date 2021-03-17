@@ -16,7 +16,7 @@ function isNameRepeated(new_name) {
 
 //get all ingredients
 router.get(api_url, (_, response) => {
-    response.json(ingredients);
+    response.status(200).json(ingredients);
 });
 
 //get ingredient by id
@@ -48,6 +48,34 @@ router.post(api_url, (request, response) => {
     const new_id = ingredients.length + 1;
     ingredients.push({new_id, name, price_kg, price_item});
     response.status(200).send('ingredient added successfully');
+});
+
+//
+router.post(api_url + '/modify', (request, response) => {
+    const {id, name, price_kg, price_item} = request.body;
+    
+    if (!(id) || !(name || price_item || price_kg)) {
+        response.status(500).send('missing id or data');
+        return;
+    }
+
+    ingredients.forEach(ingredient => {
+        if (ingredient.id == id) {
+            if (price_kg)
+                ingredient.price_kg = price_kg;
+            if (price_item) 
+                ingredient.price_item = price_item;
+            if (name)
+                if (!isNameRepeated(name)) 
+                    ingredient.name = name;
+                else
+                    response.status(200).send('ingredient modified successfully but name repeated');  
+            response.status(200).send('ingredient modified successfully');
+            return;
+        }
+    });
+
+    response.status(500).send('ingredient with id #' + id + ' not found');
 });
 
 module.exports = router;

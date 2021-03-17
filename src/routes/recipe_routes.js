@@ -16,7 +16,7 @@ function isTitleRepeated(new_title) {
 
 //get all recipes
 router.get(api_url, (_, response) => {
-    response.json(recipes);
+    response.status(200).json(recipes);
 });
 
 //get recipe by id
