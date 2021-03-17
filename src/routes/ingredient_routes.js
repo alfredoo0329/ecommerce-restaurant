@@ -50,7 +50,7 @@ router.post(api_url, (request, response) => {
     response.status(200).send('ingredient added successfully');
 });
 
-//
+//modify ingredient 
 router.post(api_url + '/modify', (request, response) => {
     const {id, name, price_kg, price_item} = request.body;
     

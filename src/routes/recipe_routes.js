@@ -8,7 +8,7 @@ const api_url = '/api/recipes';
 //methods of recipes
 function isTitleRepeated(new_title) {
     for (const recipe of recipes) {
-        let title_repeated = recipe.titlte == new_title;
+        let title_repeated = recipe.title == new_title;
         if (title_repeated) return true;
     }
     return false;
@@ -48,6 +48,39 @@ router.post(api_url, (request, response) => {
     const new_id = recipes.length + 1;
     recipes.push({new_id, image, title, price, tipe, ingredients});
     response.status(200).send('recipe added successfully');
+});
+
+
+//modify recipe 
+router.post(api_url + '/modify', (request, response) => {
+    const {id, image, title, price, tipe, ingredients} = request.body;
+    
+    if (!(id) || !(image || title || price || tipe || ingredients)) {
+        response.status(500).send('missing id or data');
+        return;
+    }
+
+    recipes.forEach(recipe => {
+        if (recipe.id == id) {
+            if (image)
+                recipe.image = image;
+            if (price) 
+                recipe.price = price;
+            if (tipe) 
+                recipe.tipe = tipe;
+            if (ingredients) 
+                recipe.ingredients = ingredients;
+            if (title)
+                if (!isTitleRepeated(title)) 
+                    recipe.title = title;
+                else
+                    response.status(200).send('recipe modified successfully but name repeated');  
+            response.status(200).send('recipe modified successfully');
+            return;
+        }
+    });
+
+    response.status(500).send('recipe with id #' + id + ' not found');
 });
 
 module.exports = router;
