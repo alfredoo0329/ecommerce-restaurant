@@ -9,6 +9,7 @@ app.use(express.json());
 
 //rutas
 app.use(require('./routes/ingredient_routes'));
+app.use(require('./routes/recipe_routes'));
 
 //Empezando el servidor
 app.listen(app.get('port'));
