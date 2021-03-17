@@ -34,5 +34,11 @@
         "name": "Pera",
         "price_kg": -1,
         "price_item": 12 
+    },
+    {
+        "id": 7,
+        "name": "Manzana",
+        "price_kg": -1,
+        "price_item": 12 
     }
 ]
