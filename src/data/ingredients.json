@@ -28,5 +28,11 @@
         "name": "Papa",
         "price_kg": 15,
         "price_item": -1 
+    },
+    {
+        "id": 6,
+        "name": "Pera",
+        "price_kg": -1,
+        "price_item": 12 
     }
 ]
