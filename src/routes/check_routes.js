@@ -13,7 +13,7 @@ router.get(api_url, (_, response) => {
 
 //add recipe to check
 router.post(api_url, (request, response) => {
-    const {id} = request.params;
+    const {id} = request.body;
     
     recipes.forEach(recipe => {
         if (recipe.id == id) {
@@ -23,10 +23,10 @@ router.post(api_url, (request, response) => {
 
             const newTotal = (price*cantidad + check.total);
     
-            check.total = newTotal;
-            check.wIVA = (newTotal*.16)+newTotal;
+            check[0].total = newTotal;
+            check[0].wIVA = (newTotal*.16)+newTotal;
             
-            check.platillos.push({id,cantidad,price});
+            check[0].platillos.push({id,cantidad,price});
     
             response.status(200).send('recipe added to check');
             return;
